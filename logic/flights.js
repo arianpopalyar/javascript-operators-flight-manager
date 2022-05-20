@@ -25,7 +25,6 @@ function Flights() {
             return total + num
         }
 
-        let distanceLimit
         if(totalDistance <= distanceLimit/2){
             return "The revision needs to be done within the next 3 months";
         }
@@ -39,7 +38,7 @@ function Flights() {
             throw (error)
         }
     }
-
- }return {calculateNumberOfFlights, checkAircraftRevision}; 
+    return {calculateNumberOfFlights, checkAircraftRevision};
+ } 
 }
 module.exports = Flights();
