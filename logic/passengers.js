@@ -1,19 +1,20 @@
 function Passengers() {
     function checkFlightCapacity(flightCapacity, passengersArray){
         let passenger;
-        let totalPassengers = 0;
+        let passengersNumber = 0;
         
         for(passenger of passengersArray){
-            totalPassengers += passenger;
+            passengersNumber += passenger;
         }
-        if(totalPassengers < flightCapacity){
-            return totalPassengers;
+        if(passengersNumber < flightCapacity){
+            return passengersNumber;
         }
-        if(totalPassengers > flightCapacity){
+        if(passengersNumber > flightCapacity){
             throw new Error("Passengers are more then flight capacity")
         }
-
+        
     }
+    return {checkFlightCapacity};
 }
 module.exports = Passengers();
 
