@@ -1,5 +1,5 @@
 function Passengers() {
-    function checkFlightCapacity(flightCapacity, passengersArray){
+    function checkFlightCapacity(flightCapacity, passengersArray) {
         let passenger;
         let passengersNumber = 0;
         
@@ -14,7 +14,16 @@ function Passengers() {
         }
         
     }
-    return {checkFlightCapacity};
+    function distributeAllSeatsToAllPassengers(vipPassengers, regularPassengers, flights,
+        businessSeatsPerFlight, economySeatsPerFlight){
+
+    }
+
+    function calculateTotalNumberOfPassengers(){
+
+    }
+
+    return {checkFlightCapacity, distributeAllSeatsToAllPassengers};
 }
 module.exports = Passengers();
 
