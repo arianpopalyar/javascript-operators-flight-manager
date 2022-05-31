@@ -6,7 +6,7 @@ function Util() {
         for(value in distributedPassengers) {
             totalDistributedPassengers += distributedPassengers[value];
         }
-        
+
         return totalDistributedPassengers;
     }
 
@@ -19,7 +19,13 @@ function Util() {
         return totalPassengers;
     }
 
-    return {calculateTotalDistributedPassengers, calculateTotalNumberOfPassengers}
+    function checkInput(input){
+        if(!input || isNaN(input)){
+            throw new Error('it is false');
+        }
+    }
+
+    return {calculateTotalDistributedPassengers, calculateTotalNumberOfPassengers, checkInput}
 }
 module.exports = Util();
 
