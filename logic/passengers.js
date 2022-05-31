@@ -63,7 +63,7 @@ function Passengers() {
                 } else{
                     passengersWithSeats += configuration.passengers;
                     configuration.seats -= configuration.passengers;
-                    configuration.seats =0;
+                    configuration.passengers =0;
                 }
             } else {
                 break;
