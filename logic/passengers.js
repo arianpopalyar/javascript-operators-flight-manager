@@ -17,7 +17,7 @@ function Passengers() {
     function distributeAllSeatsToAllPassengers(vipPassengers, regularPassengers, nrOfFlights,
         businessSeatsPerFlight, economySeatsPerFlight) {
         
-        let vipPassengersWithBusinessSeats=0, vipPassengerWithEconomySeats=0,
+        let vipPassengersWithBusinessSeats=0, vipPassengersWithEconomySeats=0,
             regularPassengersWithBusinessSeats=0, regularPassengersWithEconomySeats=0;
         let availableBusinessSeats = nrOfFlights * businessSeatsPerFlight;
         let availableEconomySeats = nrOfFlights * economySeatsPerFlight;
@@ -28,7 +28,7 @@ function Passengers() {
             
         var vipEconomyConfiguration = {passengers:vipBusinessConfiguration.passengers,
             seats:availableEconomySeats};
-            vipPassengerWithEconomySeats = updateConfiguration(vipEconomyConfiguration, economySeatsPerFlight);    
+            vipPassengersWithEconomySeats = updateConfiguration(vipEconomyConfiguration, economySeatsPerFlight);    
 
         var regularBusinessConfiguration ={passengers:regularPassengers,
             seats:vipBusinessConfiguration.seats};
@@ -41,7 +41,7 @@ function Passengers() {
             economySeatsPerFlight);
         
     return {vipPassengersWithBusinessSeats:vipPassengersWithBusinessSeats,
-        vipPassengerWithEconomySeats:vipPassengerWithEconomySeats,
+        vipPassengersWithEconomySeats:vipPassengersWithEconomySeats,
     regularPassengersWithBusinessSeats:regularPassengersWithBusinessSeats,
     regularPassengersWithEconomySeats:regularPassengersWithEconomySeats
 }
