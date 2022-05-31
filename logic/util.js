@@ -25,7 +25,19 @@ function Util() {
         }
     }
 
-    return {calculateTotalDistributedPassengers, calculateTotalNumberOfPassengers, checkInput}
+    function calculateTotalDistance(distancesArray){
+        let totalDistance =0;
+        let distance =0;
+
+        for(distance of distancesArray){
+            if(distance>0){
+                totalDistance += distance;
+            }
+        }
+        return totalDistance;
+    }
+
+    return {calculateTotalDistributedPassengers, calculateTotalNumberOfPassengers, checkInput, calculateTotalDistance}
 }
 module.exports = Util();
 
