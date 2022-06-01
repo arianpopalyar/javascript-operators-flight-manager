@@ -8,8 +8,7 @@ function Prices() {
         return finalPrice.toFixed(2);
     }
 
-    function calculateTotalFinalPrice(numberOfSeats, passengerType, flightType, basePrice){
-        let seats;
+    function calculateTotalFinalPrice(seats, passengerType, flightType, basePrice){
         return seats * calculateDefaultFinalPrice(basePrice, passengerType, flightType);
     }
 
